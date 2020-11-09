@@ -2,11 +2,14 @@
 
 function render(){
 
-        if (document.querySelector('#nomeCompleto').value == null){
-          alert("Você esqueceu de preencher o nome!");
-        } else{
-          var nome = document.querySelector('#nomeCompleto').value;
-          document.querySelector('#seuNome').innerText = nome;
+
+          if (document.getElementById('nome') == null){
+            alert("Você esqueceu de preencher o nome!");
+            return;
+          } else{
+            var nome = document.querySelector('#nome').value;
+            document.querySelector('#seuNome').innerText = nome;
+          }
 
           if (document.querySelector('#endereco').value != ""){          
             var endereco = document.querySelector('#endereco').value;
@@ -142,7 +145,7 @@ function render(){
            document.querySelector('#infoAdic').innerText = ''; 
           }
 
-        }// end if else
+
 
         
       }//end function
@@ -157,8 +160,14 @@ function convertData(dataInput){
 
 convertData();
 
-
+/*********** botão salvar ***********/
 function genPDF(){
+
+        render.call();
+
+        if (document.getElementById('nome') == null){
+          return;
+        } else{
 
         // Default export is a4 paper, portrait, using millimeters for units
         const doc = new jsPDF();
@@ -167,6 +176,31 @@ function genPDF(){
           'width':500 });
 
         doc.save('resume.pdf');
+
+      }/*final do else*/
 }
 
 genPDF();
+
+/*********** botão visualizar ***********/
+function viewPDF(){
+
+  render.call();
+
+  if (document.getElementById('nome') == null){
+          return;
+  } else{
+
+  const docV = new jsPDF();
+
+  docV.fromHTML($('#resume').get(0), 20,20,{
+    'width':500 });
+
+  docV.output('dataurlnewwindow');
+
+  }/*final do else*/
+
+}
+
+viewPDF();
+
