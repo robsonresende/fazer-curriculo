@@ -3,7 +3,7 @@
 function render(){
 
 
-          if (document.getElementById('nome') == null){
+          if (document.getElementById('nome').value == ""){
             alert("Você esqueceu de preencher o nome!");
             return;
           } else{
@@ -144,13 +144,8 @@ function render(){
            document.querySelector('#parInfoAdic').innerText = '';
            document.querySelector('#infoAdic').innerText = ''; 
           }
+}
 
-
-
-        
-      }//end function
-
-render();
 
 function convertData(dataInput){
   data = new Date(dataInput);
@@ -165,7 +160,7 @@ function genPDF(){
 
         render.call();
 
-        if (document.getElementById('nome') == null){
+        if (document.getElementById('nome').value == ""){
           return;
         } else{
 
@@ -180,27 +175,23 @@ function genPDF(){
       }/*final do else*/
 }
 
-genPDF();
+
 
 /*********** botão visualizar ***********/
 function viewPDF(){
 
   render.call();
 
-  if (document.getElementById('nome') == null){
+  if (document.getElementById('nome').value == ""){
           return;
-  } else{
+        } else{
 
-  const docV = new jsPDF();
+        const docV = new jsPDF();
 
-  docV.fromHTML($('#resume').get(0), 20,20,{
-    'width':500 });
+        docV.fromHTML($('#resume').get(0), 20,20,{
+          'width':500 });
 
-  docV.output('dataurlnewwindow');
-
-  }/*final do else*/
+        docV.output('dataurlnewwindow');
+      }
 
 }
-
-viewPDF();
-
