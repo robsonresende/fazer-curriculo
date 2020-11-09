@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- jQuery library -->
+    <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- jsPDF library -->
+    <script src="assets/js/jspdf.min.js"></script>
+
+    <!-- style CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- script js -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+    <!-- javascript js -->
+    <!-- <link type="text/JavaScript" href="assets/js/script.js"> -->
+
+    <!-- JavaScript (function)-->
+    <!-- <script type="text/javascript" src="assets/js/script.js"></script> -->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <!-- INÍCIO DA TAG SCRIPT ******************************************************************** -->
+
+    <!-- FINAL DA TAG SCRIPT ************************************************************************* -->
+
+    <title>Fazer curriculo</title>
+  </head>
+  <body>
+
+    <canvas class="layerImage"></canvas>
+
+    <div id="main">
+
+      <div id="myTitle">
+
+        <h1 id="titulo">Gerador de currículo online e grátis</h1>
+
+        <p id="descricao">É só preencher com os dados que você achar necessários e no final poderá baixar seu curriculo pronto.</p>
+
+      </div><!-- end div myTytle  -->
+
+      <fieldset id="field">
+
+        <h4>1 - Dados pessoais</h4>
+
+        <p>Nome completo</p>
+        <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="" required>
+
+        <br>
+
+        <p>Endereço</p>
+        <input type="text" name="endereco" id="endereco" placeholder="">
+
+        <br>
+
+        <p>Número do celular</p>
+        <input type="text" name="celular" id="celular" placeholder="">
+
+        <br>
+
+        <p>Número do telefone fixo</p>
+        <input type="text" name="fixo" id="fixo" placeholder="">
+
+        <br>
+
+        <h4>2 - Objetivo</h4>
+
+        <input type="text" name="objetivo" id="objetivo" placeholder="">
+
+        <br>
+
+        <h4>3 - Formação acadêmica</h4>
+
+        <p>Curso</p>
+        <input type="text" name="curso" id="curso" placeholder="">
+
+        <br>
+
+        <p>Instituição</p>
+        <input type="text" name="instituicao" id="instituicao" placeholder="">
+
+        <br>
+
+        <p>Ano</p>
+        <input type="text" name="ano" id="ano" placeholder="">
+
+        <br>
+
+        <h4>4 - Cursos complementares</h4>
+
+        <textarea name="cursos" id="cursos" placeholder="Digite o nome do curso, instituição e ano de conclusão..."></textarea>
+
+        <br>
+
+        <h4>5 - Experiência</h4>
+
+        <textarea name="experiencia" id="experiencia" placeholder="Faça um resumo das suas atividades anteriores..."></textarea>
+
+        <br>
+
+        <h4>6 - Empregos anteriores</h4><!-- HISTÓRICO PROFISSIONAL -->
+
+        <p>* Última empresa</p>
+        <input type="checkbox" name="opcao" id="emprAtual" value="atualmente"><span>Trabalhando atualmente</span><br>
+        <input type="text" name="empresa1" id="empresa1" placeholder="">
+
+        <p>Data de admissão</p>
+        <input type="date" id="admissao1">
+
+        <p>Data de desligamento</p>
+        <input type="date" id="desligamento1">
+
+        <p>Cargo</p>
+        <input type="text" id="cargo1">
+
+        <br><br>
+
+        <p>* Penúltima empresa</p>
+        <input type="text" name="empresa2" id="empresa2" placeholder="">
+
+        <p>Data de admissão</p>
+        <input type="date" id="admissao2">
+
+        <p>Data de desligamento</p>
+        <input type="date" id="desligamento2">
+
+        <p>Cargo</p>
+        <input type="text" id="cargo2">
+
+        <br><br>
+
+        <p>* Antepenúltima empresa</p>
+        <input type="text" name="empresa3" id="empresa3" placeholder="">
+
+        <p>Data de admissão</p>
+        <input type="date" id="admissao3">
+
+        <p>Data de desligamento</p>
+        <input type="date" id="desligamento3">
+
+        <p>Cargo</p>
+        <input type="text" id="cargo3">
+
+        <h4>7 - Informações adicionais</h4>
+
+        <textarea name="adicional" id="adicional" placeholder=""></textarea>
+
+        <br>
+
+        <button onclick="render();" class="btn-red"><i class="fas fa-redo-alt"></i>Visualizar</button>
+
+        <button onclick="genPDF();" class="btn-green"><i class="fas fa-file-download"></i>Salvar</button>
+
+        
+      </fieldset>
+
+    </div><!-- end div main -->
+
+
+    <!-- A T E N Ç Ã O  - esconder essa div - style visibility: hidden -->
+    <div id="resume">
+      
+      <h2 id="seuNome"></h2>
+      <p id="end"></p>
+      <p id="cel"></p>
+      <p id="fix"></p>
+
+      <h3 id="obj"></h3>
+      <p id="parObj"></p>
+
+      <h3 id="grad"></h3>
+      <p>
+        <span id="cur"></span>
+        <span id="inst"></span>
+        <span id="an"></span>
+      </p>
+
+      <h3 id="curCom"></h3>
+      <p id="parCurCom"></p>
+
+      <h3 id="exp"></h3>
+      <p id="parExp"></p>
+
+      <h3 id="empr"></h3>
+
+      <p><span id="nomeEmpr1"></span><span id="admisEmpr1"></span><span id="deslEmpr1"></span></p>
+      <p id="cargoEmpr1"></p>
+
+      <p><span id="nomeEmpr2"></span><span id="admisEmpr2"></span><span id="deslEmpr2"></span></p>
+      <p id="cargoEmpr2"></p>
+
+      <p><span id="nomeEmpr3"></span><span id="admisEmpr3"></span><span id="deslEmpr3"></span></p>
+      <p id="cargoEmpr3"></p>
+
+      <h3 id="infoAdic"></h3>
+      <p id="parInfoAdic"></p>
+
+    </div><!--FINAL div resume -->
+    
+  </body>
+</html>

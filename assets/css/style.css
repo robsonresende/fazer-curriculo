@@ -1,0 +1,188 @@
+/*  style CSS from fazer-curriculo */
+
+
+
+body {
+	background-color: #000000;
+	background-image: url("../img/letter-1920.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+body * {
+	font-family: helvetica, arial;
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+}
+
+.layerImage {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: -2;
+}
+
+p {
+	margin-bottom: 0;
+	margin-top: 1em;
+	text-align: justify;
+}
+
+h1 {
+	font-size: 2em;
+	text-align: center;
+}
+
+#descricao {
+	font-style: italic;
+}
+
+h4 {
+	font-size: 1.5em;
+	margin-top: 1em;
+}
+
+input {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 5px;
+	border-style: none;
+	color: #000000;
+	width: 100%;
+	font-weight: bold;
+}
+
+input[type=date] {
+	width: auto;
+}
+
+textarea {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 5px;
+	border-style: none;
+	color: #000000;
+	width: 100%;
+	font-weight: bold;
+}
+
+button {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-style: none;
+	border-bottom-style: groove;
+
+	font-weight: bold;
+	border-radius: 5px;
+	padding: 0.3em;
+	text-shadow: 0 2px 2px rgba(0,0,0,.5);
+}
+
+button i {
+	margin-right: 0.5em;
+}
+
+#emprAtual {
+	width: 1.5em;
+}
+
+#myTitle {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#field {
+	background-color: transparent;
+	border: 0;
+	/*border: #ffffff 3px solid;*/
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 2em;
+}
+
+.btn-red {
+	background-color: #DB2424;
+	/*font-weight: bold;
+	border-radius: 5px;
+	padding: 0.3em;
+	text-shadow: 0 2px 2px rgba(0,0,0,.5);*/
+}
+
+.btn-red:hover {
+	background-color: #9A1919;
+}
+
+.btn-green {
+	background-color: #1DAF1D;
+}
+
+.btn-green:hover {
+	background-color: #0E580E;
+}
+
+
+/*********** resume configurations ***********/
+
+#resume * {
+	color: orange;
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+/*********** escondendo a div resume ***********/
+#resume {
+	/*display: none;*/
+}
+
+/*********** dispositivos grandes ***********/
+@media (min-width: 1200.01px){
+
+}
+
+/*********** dispositivos médios ***********/
+@media (min-width: 768.01px) and (max-width: 1200px) {
+
+	body {
+		background-image: url("../img/letter-1280.jpg");
+	}
+
+	#myTitle, #field {
+		width: 60%;
+	}
+
+	
+}
+
+/*********** dispositivos pequenos ***********/
+@media (min-width: 576.01px) and (max-width: 768px) {
+
+	body {
+		background-image: url("../img/letter-1280.jpg");
+	}
+
+	#myTitle, #field {
+		width: 75%;
+	}
+}
+
+/*********** dispositivos extra pequenos ***********/
+@media (max-width: 576px) {
+
+	body {
+		background-image: url("../img/letter-640.jpg");
+	}
+
+	#myTitle, #field {
+		width: 97%;
+	}
+}
