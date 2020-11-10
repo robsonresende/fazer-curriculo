@@ -83,7 +83,7 @@ function render(){
 
           if (document.querySelector('#empresa1').value != ""){
             var empresa1 = document.querySelector('#empresa1').value;
-            document.querySelector('#nomeEmpr1').innerText = '* ' + empresa1;
+            document.querySelector('#nomeEmpr1').innerHTML = "* " + empresa1;
             var admissao1 = document.querySelector('#admissao1').value;
             document.querySelector('#admisEmpr1').innerText = " - de " + convertData(admissao1);
             var cargo1 = document.querySelector('#cargo1').value;
@@ -168,7 +168,7 @@ function genPDF(){
         const doc = new jsPDF();
 
         doc.fromHTML($('#resume').get(0), 20,20,{
-          'width':500 });
+          'width':170 });
 
         doc.save('resume.pdf');
 
@@ -189,9 +189,15 @@ function viewPDF(){
         const docV = new jsPDF();
 
         docV.fromHTML($('#resume').get(0), 20,20,{
-          'width':500 });
+          'width':170 });
 
-        docV.output('dataurlnewwindow');
+        /*inicio do codigo do stackoverflow*/
+
+        window.open(URL.createObjectURL(docV.output("blob")));
+
+        /*fim do codigo do stackoverflow*/
+
+        /*docV.output('dataurlnewwindow');*/
       }
 
 }

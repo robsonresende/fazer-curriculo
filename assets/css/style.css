@@ -133,16 +133,35 @@ button i {
 /*********** resume configurations ***********/
 
 #resume * {
-	color: orange;
+	color: #000000;
 	padding: 0;
 	border: 0;
 	margin: 0;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 /*********** escondendo a div resume ***********/
 #resume {
 	display: none;
+}
+
+/*********** configurando os elementos do resume ***********/
+#resume h2 {
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 1.4em;
+}
+
+#resume h3 {
+	font-size: 1.25em;
+	margin-top: 1em;
+}
+
+#resume p {
+}
+
+#cargoEmpr1, #cargoEmpr2 {
+	margin-bottom: 1em;
 }
 
 /*********** dispositivos grandes ***********/
