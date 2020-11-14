@@ -19,14 +19,14 @@ function render(){
           }
 
           if (document.querySelector('#celular').value != ""){
-            var celular = document.querySelector('#celular').value;
+            var celular = "Celular: " + document.querySelector('#celular').value;
             document.querySelector('#cel').innerText = celular;
           } else{
             document.querySelector('#cel').innerText = "";
           }
 
           if (document.querySelector('#fixo').value != ""){
-            var fixo = document.querySelector('#fixo').value;
+            var fixo = "Fixo: " + document.querySelector('#fixo').value;
             document.querySelector('#fix').innerText = fixo;
           } else{
             document.querySelector('#fix').innerText = "";
@@ -197,7 +197,34 @@ function viewPDF(){
 
         /*fim do codigo do stackoverflow*/
 
-        /*docV.output('dataurlnewwindow');*/
       }
 
 }
+
+/*********** gerar PDF com javascript puro ***********/
+/* fonte: http://www.macoratti.net/18/09/js_pdf1.htm */
+
+function criaPDF(){
+
+  render.call();
+
+  var meuDoc = document.getElementById('resume').innerHTML;
+
+  /* pode criar uma variável de estilo para o documento */
+  var style = '<link rel="stylesheet" type="text/css" href="assets/css/styleResume.css">';
+  
+
+  /* cria um objeto window*/
+  var win = window.open('','','height=29.7cm,width=21.0cm');
+
+  win.document.write('<html><head>');
+  win.document.write('<title>CV Pronto</title>');
+  win.document.write(style);
+  win.document.write('</head>');
+  win.document.write('<body><div id="resume">');
+  win.document.write(meuDoc);
+  win.document.write('</div></body></html>');
+  win.print();
+
+}
+

@@ -16,6 +16,7 @@
 
     <!-- jsPDF library -->
     <script type="text/javascript" src="assets/js/jspdf.min.js"></script>
+    <script type="text/javascript" src="assets/js/html2canvas.min.js"></script>
 
     <!-- javascript js -->
     <!-- <link type="text/JavaScript" href="assets/js/script.js"> -->
@@ -148,12 +149,13 @@
 
         <button onclick="viewPDF()" class="btn-red"><i class="fas fa-redo-alt"></i>Visualizar</button>
 
+        <br>
+
         <button onclick="genPDF()" class="btn-green"><i class="fas fa-file-download"></i>Salvar</button>
 
       </fieldset>
 
     </div><!-- end div main -->
-
 
     <!-- A T E N Ç Ã O  - esconder essa div - style visibility: hidden -->
     <div id="resume">
@@ -167,7 +169,7 @@
       <p id="parObj"></p>
 
       <h3 id="grad"></h3>
-      <p>
+      <p id="parGrad">
         <span id="cur"></span>
         <span id="inst"></span>
         <span id="an"></span>
