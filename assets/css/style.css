@@ -4,7 +4,7 @@
 
 body {
 	background-color: #000000;
-	background-image: url("../img/letter-1920.jpg");
+	background-image: url("../img/drip-1920.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -25,7 +25,7 @@ body * {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.7);
   z-index: -2;
 }
 
@@ -49,26 +49,17 @@ h4 {
 	margin-top: 1em;
 }
 
-input {
-	background-color: rgba(255, 255, 255, 0.6);
+input, textarea {
+	background-color: rgba(255, 255, 255, 0.8);
 	border-radius: 5px;
 	border-style: none;
 	color: #000000;
 	width: 100%;
-	font-weight: bold;
+	font-weight: 400;
 }
 
 input[type=date] {
 	width: auto;
-}
-
-textarea {
-	background-color: rgba(255, 255, 255, 0.6);
-	border-radius: 5px;
-	border-style: none;
-	color: #000000;
-	width: 100%;
-	font-weight: bold;
 }
 
 button {
@@ -76,11 +67,11 @@ button {
 	margin-bottom: 1em;
 	border-style: none;
 	border-bottom-style: groove;
-	width: 100%;
 	font-weight: bold;
-	border-radius: 5px;
+	width: 100%;
+	border-radius: 25px;
 	padding: 0.4em;
-	text-shadow: 0 2px 2px rgba(0,0,0,.5);
+	text-shadow: 0 2px 2px rgba(0,0,0,1);
 }
 
 button i {
@@ -161,6 +152,7 @@ button i {
 }
 
 #resume p {
+	width: 100%;
 }
 
 
@@ -180,7 +172,7 @@ button i {
 @media (min-width: 768.01px) and (max-width: 1200px) {
 
 	body {
-		background-image: url("../img/letter-1280.jpg");
+		background-image: url("../img/drip-1280.jpg");
 	}
 
 	#myTitle, #field {
@@ -194,7 +186,7 @@ button i {
 @media (min-width: 576.01px) and (max-width: 768px) {
 
 	body {
-		background-image: url("../img/letter-1280.jpg");
+		background-image: url("../img/drip-1280.jpg");
 	}
 
 	#myTitle, #field {
@@ -206,7 +198,7 @@ button i {
 @media (max-width: 576px) {
 
 	body {
-		background-image: url("../img/letter-640.jpg");
+		background-image: url("../img/drip-640.jpg");
 	}
 
 	#myTitle, #field {
