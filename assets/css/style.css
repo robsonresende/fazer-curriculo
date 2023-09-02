@@ -4,7 +4,7 @@
 
 body {
 	background-color: #000000;
-	background-image: url("../img/drip-1920.jpg");
+	/*background-image: url("../img/drip-1920.jpg");*/
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
