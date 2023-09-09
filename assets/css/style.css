@@ -3,11 +3,11 @@
 
 
 body {
-	background-color: #000000;
+	background-color: #ffffff;
 	/*background-image: url("../img/drip-1920.jpg");*/
-	background-repeat: no-repeat;
+	/*background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: cover;
+	background-size: cover;*/
 }
 
 body * {
@@ -25,7 +25,7 @@ body * {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(to top, #b3b3ff , #ffffff);
+  background-image: linear-gradient(to top, #ccccff , #ffffff);
   z-index: -2;
 }
 
