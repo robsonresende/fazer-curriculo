@@ -161,16 +161,12 @@ button i {
 
 
 /*********** dispositivos grandes ***********/
-@media (min-width: 1200.01px){
+@media (min-width: 1201px){
 
 }
 
 /*********** dispositivos médios ***********/
 @media (min-width: 768.01px) and (max-width: 1200px) {
-
-	body {
-		background-image: url("../img/drip-1280.jpg");
-	}
 
 	#myTitle, #field {
 		width: 60%;
@@ -182,9 +178,6 @@ button i {
 /*********** dispositivos pequenos ***********/
 @media (min-width: 576.01px) and (max-width: 768px) {
 
-	body {
-		background-image: url("../img/drip-1280.jpg");
-	}
 
 	#myTitle, #field {
 		width: 75%;
@@ -194,9 +187,6 @@ button i {
 /*********** dispositivos extra pequenos ***********/
 @media (max-width: 576px) {
 
-	body {
-		background-image: url("../img/drip-640.jpg");
-	}
 
 	#myTitle, #field {
 		width: 97%;
