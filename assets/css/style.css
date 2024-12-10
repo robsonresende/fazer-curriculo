@@ -27,6 +27,10 @@ body * {
 }
 */
 
+a, a:hover {
+	text-decoration: none;
+}
+
 p {
 	margin-bottom: 0;
 	margin-top: 1em;
@@ -115,6 +119,15 @@ button i {
 
 .btn-green:hover {
 	background-color: #33ff33;
+}
+
+.mylink {
+	text-align: center;
+	margin-top: 3rem;
+}
+
+.core {
+	color: #ff0000;
 }
 
 

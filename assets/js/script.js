@@ -170,7 +170,7 @@ function genPDF(){
         doc.fromHTML($('#resume').get(0), 20,20,{
           'width':170 });
 
-        doc.save('resume.pdf');
+        doc.save('curriculo.pdf');
 
       }/*final do else*/
 }
