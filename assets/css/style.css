@@ -13,6 +13,7 @@ body * {
 	padding: 0;
 }
 
+/*
 .layerImage {
   position: fixed;
   width: 100%;
@@ -24,6 +25,7 @@ body * {
   background-image: linear-gradient(to top, #e6e6ff , #ffffff);
   z-index: -2;
 }
+*/
 
 p {
 	margin-bottom: 0;
